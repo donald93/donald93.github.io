@@ -29,3 +29,6 @@ Home
     Loses most against/Wins most against (top 5 for each)
   Latest Games
     5 latest games or something/games played in last week
+  Create Game (admin locked later on) 
+    Requires all players, aliens, scores (if tournament), and date
+    
