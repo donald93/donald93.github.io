@@ -1,0 +1,31 @@
+Home
+  Games
+    List of games with short generated summary
+    Individual game
+      Winner
+      Players
+      Aliens
+      Date
+      Score (if tournament game)
+  Players
+    List of all players with short generated summary
+    Individual players
+      Winrate
+      Most Played Alien
+      Alien with highest winrate
+      Number of games
+      Average points (tournament)
+      Overall ranking amongst players
+      Fun rank based on exp points for wins
+      tournament results
+      Other players most played with
+      Players cowon with
+  Alien Races
+    List of all aliens
+    Info on alien from card
+    Number of times picked
+    Winrate
+    Average points (tournament)
+    Loses most against/Wins most against (top 5 for each)
+  Latest Games
+    5 latest games or something/games played in last week
