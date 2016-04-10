@@ -1,9 +1,41 @@
 <!DOCTYPE html>
-<html ng-app>
-  <script data-require="angular.js@1.5.3" data-semver="1.5.3" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<meta charset="UTF-8">
+<html ng-app="cosmicCompanionApp">
+<script data-require="angular.js@1.5.3" data-semver="1.5.3" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="js/controllers.js"></script>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GiHub Pages.</p>
-{{22+32}}
+    <h1>Cosmic Companion</h1>
+    <div ng-controller="GamesListController">
+        <h2>Games</h2>
+        <ul>
+            <li ng-repeat="game in games | orderBy:gamesListOrder">
+                <span>{{game.date}}</span>
+                <p>{{game.winner}}</p>
+        </ul>
+
+    </div>
+    <div ng-controller="PlayersListController">
+        <h2>Players</h2>
+        <ul>
+            <li ng-repeat="player in players | orderBy:playerListOrder">
+                <span>{{player.name}}</span>
+                <p>{{player.bio}}</p>
+        </ul>
+    </div>
+
+    <div ng-controller="IndividualPlayerController">
+        <h2>{{player.name}}</h2>
+     </div>
+     
+         <div ng-controller="AlienListController">
+        <h2>Aliens</h2>
+        <ul>
+            <li ng-repeat="alien in aliens | orderBy:alienListOrder">
+                <span>{{alien.name}}</span>
+                <p>{{alien.power}}</p>
+        </ul>
+    </div>
 </body>
+
 </html>

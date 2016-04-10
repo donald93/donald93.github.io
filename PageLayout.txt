@@ -19,7 +19,7 @@ Home
       Fun rank based on exp points for wins
       tournament results
       Other players most played with
-      Players cowon with
+      Players co-won with
   Alien Races
     List of all aliens
     Info on alien from card
