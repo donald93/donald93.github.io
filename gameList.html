@@ -1,0 +1,10 @@
+<div>
+  <h2>Games</h2>
+  <ul>
+    <li ng-repeat="game in games | orderBy:gamesListOrder">
+      <span>{{game.date}}</span>
+      <p>{{game.winner}}</p>
+      </li>
+  </ul>
+
+</div>

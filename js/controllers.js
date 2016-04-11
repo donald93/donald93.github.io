@@ -1,6 +1,6 @@
-var cosmicCompanionApp = angular.module('cosmicCompanionApp', []);
+var siteControllers = angular.module('siteControllers', []);
 
-cosmicCompanionApp.controller('GamesListController', function($scope)
+siteControllers.controller('GamesListController', function($scope)
 {
   
   $scope.games = [
@@ -16,7 +16,7 @@ cosmicCompanionApp.controller('GamesListController', function($scope)
   
 });
 
-cosmicCompanionApp.controller('PlayersListController', function($scope){
+siteControllers.controller('PlayersListController', function($scope){
   $scope.players = [
     {
       'name': 'Donald',
@@ -37,14 +37,14 @@ cosmicCompanionApp.controller('PlayersListController', function($scope){
   
 });
 
-cosmicCompanionApp.controller('IndividualPlayerController', function($scope){
+siteControllers.controller('IndividualPlayerController', function($scope){
   $scope.player = 
     {
       'name': 'Donald'
     };
 });
 
-cosmicCompanionApp.controller('AlienListController', function($scope){
+siteControllers.controller('AlienListController', function($scope){
   $scope.aliens = [
     {
       'name': 'The Claw',
