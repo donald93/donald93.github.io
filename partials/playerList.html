@@ -1,0 +1,8 @@
+<div ng-controller="PlayersListController">
+  <h2>Players</h2>
+  <ul>
+    <li ng-repeat="player in players | orderBy:playerListOrder">
+      <a ng-href="#players/{{player.name}}">{{player.name}}</a>
+      <p>{{player.bio}}</p>
+  </ul>
+</div>

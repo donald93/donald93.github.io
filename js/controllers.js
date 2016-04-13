@@ -37,11 +37,8 @@ siteControllers.controller('PlayersListController', function($scope){
   
 });
 
-siteControllers.controller('IndividualPlayerController', function($scope){
-  $scope.player = 
-    {
-      'name': 'Donald'
-    };
+siteControllers.controller('IndividualPlayerController', function($scope, $routeParams){
+  $scope.playerName = $routeParams.playerName
 });
 
 siteControllers.controller('AlienListController', function($scope){

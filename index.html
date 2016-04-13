@@ -7,31 +7,12 @@
 <script src="js/app.js"></script>
 
 <body>
-    <h1>Cosmic Companion</h1>
-    
-    <div ng-view></div>
-    
-    <div ng-controller="PlayersListController">
-        <h2>Players</h2>
-        <ul>
-            <li ng-repeat="player in players | orderBy:playerListOrder">
-                <span>{{player.name}}</span>
-                <p>{{player.bio}}</p>
-        </ul>
-    </div>
+  <h1>Cosmic Companion</h1>
+    <a href="#/games">Games</a>
+    <a href="#/aliens">Aliens</a>
+    <a href="#/players">Players</a>
+  <div ng-view></div>
 
-    <div ng-controller="IndividualPlayerController">
-        <h2>{{player.name}}</h2>
-    </div>
-
-    <div ng-controller="AlienListController">
-        <h2>Aliens</h2>
-        <ul>
-            <li ng-repeat="alien in aliens | orderBy:alienListOrder">
-                <span>{{alien.name}}</span>
-                <p>{{alien.power}}</p>
-        </ul>
-    </div>
 </body>
 
 </html>

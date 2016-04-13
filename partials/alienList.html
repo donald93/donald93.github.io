@@ -1,0 +1,9 @@
+<div ng-controller="AlienListController">
+  <h2>Aliens</h2>
+  <ul>
+    <li ng-repeat="alien in aliens | orderBy:alienListOrder">
+      <span>{{alien.name}}</span>
+      <p>{{alien.power}}</p>
+    </li>
+  </ul>
+</div>
