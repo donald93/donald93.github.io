@@ -1,5 +1,7 @@
 <div ng-controller="AlienListController">
+  <div class="page-header" style="margin:80px">
   <h2>Aliens</h2>
+  </div>
   <ul>
     <li ng-repeat="alien in aliens | orderBy:alienListOrder">
       <span>{{alien.name}}</span>
