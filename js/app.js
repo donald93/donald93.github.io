@@ -1,6 +1,7 @@
 var cosmicCompanionApp = angular.module('cosmicCompanionApp', [
   'ngRoute',
-  'siteControllers'
+  'siteControllers',
+  'siteServices'
 ]);
 
 cosmicCompanionApp.config(['$routeProvider',

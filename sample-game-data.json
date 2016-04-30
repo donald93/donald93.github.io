@@ -3,6 +3,7 @@
     {
       "id": "000001",
       "date": "02/02/2016",
+      "tournament": false,
       "players": [
         {
           "id": "000001",
@@ -33,6 +34,7 @@
     {
       "id": "000002",
       "date": "01/02/2016",
+      "tournament": false,
       "players": [
         {
           "id": "000001",
@@ -63,6 +65,7 @@
     {
       "id": "000003",
       "date": "02/04/2016",
+      "tournament": false,
       "players": [
         {
           "id": "000005",
@@ -117,6 +120,7 @@
     {
       "id": "000004",
       "date": "02/07/2016",
+      "tournament": false,
       "players": [
         {
           "id": "000003",
