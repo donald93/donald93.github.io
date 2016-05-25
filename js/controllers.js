@@ -9,6 +9,7 @@ siteControllers.controller('NavigationController', function ($scope, $location) 
 });
 
 siteControllers.controller('GamesListController', function ($scope, httpService) {
+  
   var onRecentGamesComplete = function(response){
     $scope.games = response.games;
   };
@@ -20,7 +21,7 @@ siteControllers.controller('GamesListController', function ($scope, httpService)
   
   httpService.getRecentGames().then(onRecentGamesComplete, onError);
  
-  $scope.gamesListOrder = '-games.date';
+  $scope.gamesListOrder = '-date';
 });
 
 siteControllers.controller('PlayersListController', function ($scope) {
