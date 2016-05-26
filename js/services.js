@@ -11,7 +11,15 @@ siteServices.factory('httpService', function ($http) {
 
   };
 
+  var getPlayers = function () {
+    return $http.get("sample-player-data.json")
+      .then(function (response) {
+        return response.data;
+      });
+  };
+
   return {
-    getRecentGames: getRecentGames
+    getRecentGames: getRecentGames,
+    getPlayers: getPlayers
   };
 });

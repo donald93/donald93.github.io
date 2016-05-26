@@ -1,0 +1,46 @@
+{
+  "players": [
+    {
+      "id": "000001",
+      "name": "Jackson",
+      "gamesPlayed": 10,
+      "winRate": 50,
+      "mostPlayedAlien": "The Claw"
+    },
+    {
+      "id": "000002",
+      "name": "Josh Denney",
+      "gamesPlayed": 7,
+      "winRate": 35,
+      "mostPlayedAlien": "Fury"
+    },
+    {
+      "id": "000003",
+      "name": "Ben Davidson",
+      "gamesPlayed": 10000,
+      "winRate": 99,
+      "mostPlayedAlien": "Disease"
+    },
+    {
+      "id": "000004",
+      "name": "Jeremy Wagner",
+      "gamesPlayed": 9999,
+      "winRate": 98,
+      "mostPlayedAlien": "The Horde"
+    },
+    {
+      "id": "000005",
+      "name": "Rich",
+      "gamesPlayed": 10,
+      "winRate": 50,
+      "mostPlayedAlien": "Chosen"
+    },
+    {
+      "id": "000006",
+      "name": "Donald",
+      "gamesPlayed": 999,
+      "winRate": 1,
+      "mostPlayedAlien": "Warhawk"
+    }
+  ]
+}

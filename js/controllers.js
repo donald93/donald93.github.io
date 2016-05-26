@@ -1,6 +1,6 @@
 var siteControllers = angular.module('siteControllers', [
 
-  ]);
+]);
 
 siteControllers.controller('NavigationController', function ($scope, $location) {
   $scope.isActive = function (viewLocation) {
@@ -9,37 +9,31 @@ siteControllers.controller('NavigationController', function ($scope, $location) 
 });
 
 siteControllers.controller('GamesListController', function ($scope, httpService) {
-  
-  var onRecentGamesComplete = function(response){
+
+  var onRecentGamesComplete = function (response) {
     $scope.games = response.games;
   };
-  
-  var onError = function(reason)
-  {
+
+  var onError = function (reason) {
     $scope.error = "Could not fetch data";
   };
-  
+
   httpService.getRecentGames().then(onRecentGamesComplete, onError);
- 
+
   $scope.gamesListOrder = '-date';
 });
 
-siteControllers.controller('PlayersListController', function ($scope) {
-  $scope.players = [
-    {
-      'name': 'Donald',
-      'bio': 'super cool'
-    },
-    {
-      'name': 'Ben',
-      'bio': 'Bald'
-    },
-    {
-      'name': 'Jared',
-      'bio': 'crossfit'
-    },
+siteControllers.controller('PlayersListController', function ($scope, httpService) {
 
-  ];
+  var onGetPlayersComplete = function (response) {
+    $scope.players = response.players;
+  }
+
+  var onError = function (reason) {
+    $scope.error = "Could not fetch data";
+  }
+
+  httpService.getPlayers().then(onGetPlayersComplete, onError);
 
   $scope.playerListOrder = '+name';
 });
