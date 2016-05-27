@@ -19,7 +19,7 @@ cosmicCompanionApp.config(['$routeProvider',
         controller: 'AlienListController'
 
       }).
-      when('/players/:playerName', {
+      when('/players/:playerId', {
         templateUrl: 'partials/player-detail.html',
         controller: 'IndividualPlayerController'
       }).

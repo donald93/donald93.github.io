@@ -2,6 +2,37 @@
   <div class="page-header" style="margin:80px">
     <h2>Games</h2>
   </div>
+
+  <div>
+    <button type="button" class="btn btn-primary" ng-click="toggleAddGame()">
+    Add Game
+  </button>
+  </div>
+  </br>
+
+  <div ng-show="showAddGame">
+    <form name="addGameForm">
+      <div>
+        <div>
+          Players:
+        </div>
+        <div>
+          Date:
+        </div>
+
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-success">
+        Submit
+      </button>
+        <button type="button" class="btn btn-secondary" ng-click="toggleAddGame()"">
+        Cancel
+      </button>
+      </div>
+    </form>
+  </div>
+
   <ul ng-repeat="game in games | orderBy : gamesListOrder">
     <li>
       <span>{{game.date}}</span>
@@ -9,8 +40,8 @@
     <ul>
       <li ng-repeat="player in game.players | orderBy: ['-winner', 'name']">
         <div ng-class="{winner : player.winner}">
-        <a ng-href="#players/{{player.name}}">{{player.name}}</a> ~
-        <a ng-href="#aliens/{{player.alien}}">{{player.alien}}</a>
+          <a ng-href="#players/{{player.id}}">{{player.name}}</a> ~
+          <a ng-href="#aliens/{{player.alien}}">{{player.alien}}</a>
         </div>
       </li>
     </ul>
