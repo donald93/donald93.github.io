@@ -12,36 +12,65 @@
 
   <div ng-show="showAddGame">
     <form name="addGameForm">
+
       <div>
-        <div>
-          Players:
-        </div>
-        <div>
+        <ul ng-repeat="player in newGame.players track by $index">
+          <div>
+            <lable>
+              User Id:
+              <input type="text" ng-model="newGame.players[$index].name">
+     
+            </lable>
+
+            <lable>
+              Alien:
+              <input type="text" ng-model="player.alien">
+            </lable>
+
+            <lable>Winner?:
+              <input type="checkbox" ng-model="player.winner"></input>
+            </lable>
+
+            <button ng-click="decrementPlayersCount()" ng-show="availableToRemove($index + 1)">
+              -
+            </button>
+          </div>
+        </ul>
+
+        </br>
+
+        <button ng-click="incrementPlayersCount()" ng-disabled="reachedMaxPlayers()">
+          Add Player
+        </button>
+        </br>
+        </br>
+        <lable>
           Date:
-        </div>
+          <input type="date" ng-model = "newGame.date">
+        </lable>
 
       </div>
-
+      </br>
       <div>
-        <button type="button" class="btn btn-success">
+        <button type="button" class="btn btn-success" ng-click="addGame(newGame)">
         Submit
       </button>
-        <button type="button" class="btn btn-secondary" ng-click="toggleAddGame()"">
+        <button type="button" class="btn btn-secondary" ng-click="toggleAddGame()" ">
         Cancel
       </button>
       </div>
     </form>
   </div>
 
-  <ul ng-repeat="game in games | orderBy : gamesListOrder">
+  <ul ng-repeat="game in games | orderBy : gamesListOrder ">
     <li>
       <span>{{game.date}}</span>
     </li>
     <ul>
-      <li ng-repeat="player in game.players | orderBy: ['-winner', 'name']">
-        <div ng-class="{winner : player.winner}">
-          <a ng-href="#players/{{player.id}}">{{player.name}}</a> ~
-          <a ng-href="#aliens/{{player.alien}}">{{player.alien}}</a>
+      <li ng-repeat="player in game.players | orderBy: [ '-winner', 'name'] ">
+        <div ng-class="{winner : player.winner} ">
+          <a ng-href="#players/{{player.id}} ">{{player.name}}</a> ~
+          <a ng-href="#aliens/{{player.alien}} ">{{player.alien}}</a>
         </div>
       </li>
     </ul>
