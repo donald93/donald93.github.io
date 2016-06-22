@@ -2,7 +2,7 @@ siteControllers.controller('GamesListController', function ($scope, httpService)
 
   $scope.newGamePlayersCount = 3;
   $scope.newGame = {};
-  $scope.newGame.players = new Array ($scope.newGamePlayersCount);
+  $scope.newGame.players = new Array($scope.newGamePlayersCount);
 
   // $scope.getNewGamePlayersCount = function () {
   //   return $scope.newGame.players = new Array ($scope.newGamePlayersCount);
@@ -47,8 +47,31 @@ siteControllers.controller('GamesListController', function ($scope, httpService)
 
   $scope.toggleAddGame = toggleAddGame;
 
-  $scope.addGame = function (game) {
+  $scope.addGame = function (newGame) {
+    var gameToBeAdded = {};
+    gameToBeAdded.players = new Array(0);
+    gameToBeAdded.date = newGame.date;
 
-  }
+    for (i = 0; i < newGame.players.length; i++) {
+      var wasPlayerWinner = newGame.players[i].winner;
+      if (wasPlayerWinner != true) {
+        wasPlayerWinner = false;
+      }
+      var playerToBeAdded = {
+        id: newGame.players[i].id,
+        name: newGame.players[i].id,
+        alien: newGame.players[i].alien,
+        winner: wasPlayerWinner
+      };
+
+      gameToBeAdded.players.push(playerToBeAdded);
+
+    }
+
+    $scope.games.push(gameToBeAdded);
+    $scope.newGamePlayersCount = 3;
+    $scope.newGame = {};
+    $scope.newGame.players = new Array($scope.newGamePlayersCount);
+  };
 
 });

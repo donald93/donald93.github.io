@@ -18,17 +18,17 @@
           <div>
             <lable>
               User Id:
-              <input type="text" ng-model="newGame.players[$index].name">
-     
+              <input type="text" ng-model="newGame.players[$index].id">
+
             </lable>
 
             <lable>
               Alien:
-              <input type="text" ng-model="player.alien">
+              <input type="text" ng-model="newGame.players[$index].alien">
             </lable>
 
             <lable>Winner?:
-              <input type="checkbox" ng-model="player.winner"></input>
+              <input type="checkbox" ng-model="newGame.players[$index].winner"></input>
             </lable>
 
             <button ng-click="decrementPlayersCount()" ng-show="availableToRemove($index + 1)">
@@ -46,7 +46,7 @@
         </br>
         <lable>
           Date:
-          <input type="date" ng-model = "newGame.date">
+          <input type="date" ng-model="newGame.date">
         </lable>
 
       </div>
